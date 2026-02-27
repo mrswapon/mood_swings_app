@@ -135,7 +135,7 @@ lib/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/mood_swings_app.git
+   git clone https://github.com/mrswapon/mood_swings_app
    cd mood_swings_app
    ```
 
