@@ -41,7 +41,7 @@ class MoodProvider extends ChangeNotifier {
   /// Map of date (time stripped) -> dominant mood for that day (last entry of the day)
   Map<DateTime, MoodType> get dailyMoodMap {
     final map = <DateTime, MoodType>{};
-    // entries are sorted newest first, so later entries overwrite earlier
+    //=======================> entries are sorted newest first, so later entries overwrite earlier <=============
     for (final entry in _entries.reversed) {
       map[AppDateUtils.stripTime(entry.dateTime)] = entry.moodType;
     }
@@ -102,7 +102,7 @@ class MoodProvider extends ChangeNotifier {
     return streak;
   }
 
-  // --- CRUD ---
+  //=======================> CRUD <=============
 
   Future<void> loadEntries() async {
     _isLoading = true;

@@ -8,15 +8,15 @@ import 'package:mood_swings_app/services/local_storage_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize storage
+  //=======================> Initialize storage <=============
   final storageService = LocalStorageService();
   await storageService.init();
 
-  // Create providers
+  //=======================> Create providers <=============
   final moodProvider = MoodProvider(storageService);
   final themeProvider = ThemeProvider(storageService);
 
-  // Load persisted data
+  //=======================> Load persisted data <=============
   await Future.wait([
     moodProvider.loadEntries(),
     themeProvider.loadPreference(),

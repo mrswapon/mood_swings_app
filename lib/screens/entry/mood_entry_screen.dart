@@ -87,7 +87,7 @@ class _MoodEntryScreenState extends State<MoodEntryScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Mood selector
+            //=======================> Mood selector <=============
             Text(
               'Select your mood',
               style: Theme.of(context).textTheme.titleMedium,
@@ -99,7 +99,7 @@ class _MoodEntryScreenState extends State<MoodEntryScreen> {
             ),
             const SizedBox(height: 32),
 
-            // Note field
+            //=======================> Note field <=============
             Text(
               'Add a note (optional)',
               style: Theme.of(context).textTheme.titleMedium,
@@ -121,7 +121,7 @@ class _MoodEntryScreenState extends State<MoodEntryScreen> {
             ),
             const SizedBox(height: 24),
 
-            // Activities
+            //=======================> Activities <=============
             Text(
               'Activities',
               style: Theme.of(context).textTheme.titleMedium,
@@ -149,7 +149,7 @@ class _MoodEntryScreenState extends State<MoodEntryScreen> {
             ),
             const SizedBox(height: 32),
 
-            // Save button
+            //=======================> Save button <=============
             SizedBox(
               width: double.infinity,
               height: 52,

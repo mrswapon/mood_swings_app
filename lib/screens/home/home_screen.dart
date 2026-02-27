@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Greeting
+            //=======================> Greeting <=============
             Text(
               '${AppDateUtils.greeting()} \u{1F44B}',
               style: Theme.of(context).textTheme.headlineLarge,
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // Today's mood
+            //=======================> Today's mood <=============
             if (moodProvider.todayEntry != null) ...[
               Text(
                 "Today's Mood",
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Recent entries
+            //=======================> Recent entries <=============
             if (moodProvider.recentEntries.isNotEmpty) ...[
               Text(
                 'Recent Entries',
@@ -123,17 +123,6 @@ class _TodayMoodBanner extends StatelessWidget {
       child: Container(
         width: double.infinity,
         padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          gradient: LinearGradient(
-            colors: [
-              entry.moodType.color.withValues(alpha: 0.3),
-              entry.moodType.color.withValues(alpha: 0.1),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
         child: Column(
           children: [
             Text(

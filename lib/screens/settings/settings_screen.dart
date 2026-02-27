@@ -21,7 +21,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // Appearance section
+          //=======================> Appearance section <=============
           Text(
             'Appearance',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -44,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // Data section
+          //=======================> Data section <=============
           Text(
             'Data',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -62,7 +62,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // About section
+          //=======================> About section <=============
           Text(
             'About',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -94,7 +94,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 32),
 
-          // Footer
+          //=======================> Footer <=============
           Center(
             child: Text(
               'Made with \u{2764} in Flutter',

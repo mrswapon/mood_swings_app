@@ -16,7 +16,7 @@ class StatsScreen extends StatefulWidget {
 }
 
 class _StatsScreenState extends State<StatsScreen> {
-  int _selectedPeriod = 0; // 0: Week, 1: Month, 2: All Time
+  int _selectedPeriod = 0;
 
   int get _periodDays => switch (_selectedPeriod) {
         0 => 7,
@@ -73,7 +73,7 @@ class _StatsScreenState extends State<StatsScreen> {
             ),
             const SizedBox(height: 16),
 
-            // Period selector
+            //=======================> Period selector <=============
             SegmentedButton<int>(
               segments: const [
                 ButtonSegment(value: 0, label: Text('Week')),
@@ -87,7 +87,7 @@ class _StatsScreenState extends State<StatsScreen> {
             ),
             const SizedBox(height: 24),
 
-            // Mood trend chart
+            //=======================> Mood trend chart <=============
             Text(
               'Mood Trends',
               style: Theme.of(context).textTheme.titleMedium,
@@ -114,12 +114,12 @@ class _StatsScreenState extends State<StatsScreen> {
               ),
             const SizedBox(height: 24),
 
-            // Summary cards
+            //=======================> Summary cards <=============
             Text(
               'Summary',
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
             Row(
               children: [
                 Expanded(
@@ -128,9 +128,10 @@ class _StatsScreenState extends State<StatsScreen> {
                     value: '$streak ${streak == 1 ? 'day' : 'days'}',
                     icon: Icons.local_fire_department,
                     color: AppColors.accent,
+                    delay: 0,
                   ),
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 10),
                 Expanded(
                   child: StatSummaryCard(
                     title: 'Most\nCommon',
@@ -139,22 +140,24 @@ class _StatsScreenState extends State<StatsScreen> {
                         : '-',
                     icon: Icons.emoji_emotions,
                     color: mostCommon?.color ?? Colors.grey,
+                    delay: 120,
                   ),
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 10),
                 Expanded(
                   child: StatSummaryCard(
                     title: 'Total\nEntries',
                     value: '$totalEntries',
                     icon: Icons.edit_note,
                     color: AppColors.primary,
+                    delay: 240,
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 24),
 
-            // Distribution
+            //=======================> Distribution <=============
             Text(
               'Mood Distribution',
               style: Theme.of(context).textTheme.titleMedium,

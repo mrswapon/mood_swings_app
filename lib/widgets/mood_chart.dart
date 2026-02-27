@@ -64,7 +64,7 @@ class MoodChart extends StatelessWidget {
                     if (index < 0 || index >= data.length) {
                       return const SizedBox.shrink();
                     }
-                    // Show every other label if too many points
+                    //=======================> Show every other label if too many points <=============
                     if (data.length > 7 && index % 2 != 0) {
                       return const SizedBox.shrink();
                     }
